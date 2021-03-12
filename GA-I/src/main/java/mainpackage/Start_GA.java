@@ -56,8 +56,10 @@ public class Start_GA {
 		int DESIRED_MIN_COVERAGE = Integer.parseInt(args[4]);
 		int MAX_ITERATION = Integer.parseInt(args[5]);
 		Path scriptFilePath= Paths.get(args[6]);
-		int mutationRate = Integer.parseInt(args[7]);
-		int crossoverRate = Integer.parseInt(args[8]);
+		double strtoDoubleMu = Double.parseDouble(args[7]);
+		int mutationRate = (int) (strtoDoubleMu*100);
+		double strtoDoubleCro = Double.parseDouble(args[8]);
+		int crossoverRate = (int) (strtoDoubleCro*100);
 		Path opcodePath = Paths.get(args[9]);
 		String output_file = args[10];
 		//*******************************************************
